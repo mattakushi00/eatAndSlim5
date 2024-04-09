@@ -1,0 +1,13 @@
+.product {
+  max-width: 392px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    max-width: 392px;
+    position: relative;
+    z-index: 5;
+  }
+}

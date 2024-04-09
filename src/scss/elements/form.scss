@@ -1,0 +1,91 @@
+.form {
+  position: relative;
+  z-index: 3;
+
+  &__wrap {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  &__select {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      aspect-ratio: 1 / 1;
+      background: url('../../assets/img/form__select.svg') no-repeat center / contain;
+      right: 20px;
+      z-index: 6;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    font-size: 16px;
+    border-radius: 90px;
+    background: $white;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 3;
+
+    &_grey {
+      background: $grey_ligth;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .form {
+    max-width: 585px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    max-width: 430px;
+
+    &__wrap {
+      max-width: 330px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    max-width: 330px;
+    padding: 0 0 20px;
+
+    &__wrap {
+      max-width: 255px;
+    }
+
+    &__input {
+      padding: 8px 15px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form {
+    max-width: 480px;
+    padding: 15px 0;
+
+    &__wrap {
+      max-width: 290px;
+    }
+
+    &__input {
+      padding: 20px;
+    }
+  }
+}

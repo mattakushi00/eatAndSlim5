@@ -1,0 +1,38 @@
+/*libs*/
+@import "~slick-carousel/slick/slick";
+@import "~normalize-scss";
+
+/*commons*/
+@import "scss/commons/colors";
+@import "scss/commons/mixins";
+@import "scss/commons/commons";
+@import "scss/commons/fonts";
+@import "scss/commons/grid";
+@import "scss/commons/customReset";
+@import "scss/commons/slick-theme_custom";
+
+/*elements*/
+@import "scss/elements/link";
+@import "scss/elements/counter";
+@import "scss/elements/nav";
+@import "scss/elements/title";
+@import "scss/elements/form";
+@import "scss/elements/price";
+@import "scss/elements/product";
+@import "scss/elements/logo";
+
+/*blocks*/
+@import "scss/blocks/header";
+@import "scss/blocks/main";
+@import "scss/blocks/sick";
+@import "scss/blocks/about";
+@import "scss/blocks/desc";
+@import "scss/blocks/base";
+@import "scss/blocks/result";
+@import "scss/blocks/expert";
+@import "scss/blocks/lessons";
+@import "scss/blocks/comments";
+@import "scss/blocks/footer";
+
+/*others*/
+@import "scss/commons/animation";

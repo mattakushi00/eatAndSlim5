@@ -1,0 +1,54 @@
+* {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  color: $dark;
+}
+
+select {
+  text-indent: 1px;
+  text-overflow: '';
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.anchor {
+  position: relative;
+  visibility: hidden;
+  top: -90px;
+}
+
+.svg__clip {
+  width: 0;
+  height: 0;
+}
+
+section {
+  position: relative;
+}
+
+.gradient {
+  background: $gradient;
+}
+
+.background {
+  background: $main;
+  margin-top: -1px;
+}
+
+button {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section {
+    padding: 15px 0;
+  }
+
+  .gradient {
+    background: $gradient_mobile;
+  }
+}

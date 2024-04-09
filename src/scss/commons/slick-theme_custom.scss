@@ -1,0 +1,283 @@
+/* Arrows */
+.slick-prev,
+.slick-next {
+  color: transparent;
+  font-size: 0;
+
+  line-height: 0;
+  display: block;
+
+  background: transparent;
+
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+
+  -ms-transform: translate(0, -50%);
+
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-family: 'slick';
+  font-size: 20px;
+
+  line-height: 1.04;
+  opacity: .75;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+.slick-prev:before {
+  content: '←';
+}
+
+[dir='rtl'] .slick-prev:before {
+  content: '→';
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+.slick-next:before {
+  content: '→';
+}
+
+[dir='rtl'] .slick-next:before {
+  content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  text-align: center;
+  display: block;
+
+  position: absolute;
+
+  bottom: -25px;
+  width: 100%;
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.slick-dots li {
+  display: inline-block;
+
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  color: transparent;
+  font-size: 0;
+
+  line-height: 0;
+
+  display: block;
+  background: transparent;
+  width: 20px;
+
+  height: 20px;
+
+  padding: 5px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  content: '•';
+  color: black;
+  font-family: 'slick';
+
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 20px;
+
+  height: 20px;
+  opacity: .25;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: .75;
+}
+
+.slick {
+  &-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  &-slide {
+    height: auto;
+  }
+
+  &-prev,
+  &-next {
+    z-index: 2;
+    top: auto;
+    bottom: 0;
+    width: 57px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  &-prev {
+    background: url('../../assets/img/slider__arrow-prev.svg') no-repeat center / contain;
+    left: 0;
+    transform: none;
+  }
+
+  &-next {
+    background: url('../../assets/img/slider__arrow-prev.svg') no-repeat center / contain;
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  &-dots {
+    bottom: 23px;
+    left: 50%;
+    width: 85%;
+    transform: translateX(-50%);
+  }
+
+  &-dots li {
+    background: none;
+    border: 2px solid $dark;
+    width: 100px;
+    height: 10px;
+    border-radius: 90px;
+
+    &.slick-active {
+      background: $dark;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+
+      &:before {
+        content: none;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slick {
+    &-track {
+      gap: 15px;
+    }
+
+    &-prev,
+    &-next {
+      width: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick {
+
+    &-slider {
+      padding-bottom: 20px;
+    }
+
+    &-prev,
+    &-next {
+      width: 35px;
+    }
+
+    &-dots {
+      bottom: 13px;
+
+      li {
+        height: 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slick {
+    &-track {
+      gap: 0;
+    }
+  }
+}

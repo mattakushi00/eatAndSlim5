@@ -1,0 +1,260 @@
+.desc {
+  padding: 50px 0 70px;
+
+  &__container {
+    gap: 50px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 900;
+    max-width: 810px;
+
+    span {
+      color: $main2;
+      display: block;
+    }
+  }
+
+  &__avatars {
+    display: flex;
+    position: relative;
+    max-width: 280px;
+
+    &:before {
+      content: '';
+      display: block;
+      background: $dark;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: -60px;
+      width: 188px;
+      height: 2px;
+      transform: translate(-50%, -100%);
+    }
+  }
+
+  &__avatars-item {
+    position: relative;
+    max-width: 153px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+
+    &:last-child {
+      transform: translateX(-15%);
+    }
+  }
+
+  &__avatars-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: 50% 30%;
+
+    &_2 {
+      transform: translateX(-58%);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 85px;
+  }
+
+  &__left {
+    position: relative;
+    max-width: 458px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      background: $main;
+      z-index: 1;
+      right: -40px;
+      bottom: 0;
+      width: 1000px;
+      height: 220px;
+      border-radius: 25px;
+    }
+
+    &:after {
+      background: $white;
+      z-index: 0;
+      width: 1150px;
+      aspect-ratio: 1 / 1;
+      @include center;
+      opacity: .6;
+      filter: blur(315px);
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__right {
+    max-width: 640px;
+  }
+
+  &__subtitle {
+    font-size: 23px;
+    font-weight: 400;
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 30px;
+    padding: 0 60px 0 50px;
+
+    b {
+      font-weight: 900;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      background: url("../../assets/img/arrow__red.svg") no-repeat center / contain;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 56px;
+      height: 64px;
+      transform: translate(0, -70%);
+    }
+
+  }
+
+  &__list-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    max-width: 25px;
+    transform: translateY(-50%);
+  }
+
+  &__list-text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__link {
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  .desc {
+    &__avatars {
+      &:before {
+        left: -10px;
+        width: 60px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .desc {
+
+    &__header {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__left {
+      order: 2;
+    }
+
+    &__right {
+      order: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desc {
+    padding: 20px 0 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .desc {
+    &__title {
+      font-size: 29px;
+    }
+
+    &__container {
+      gap: 0;
+    }
+
+    &__row {
+      margin-bottom: 25px;
+    }
+
+    &__subtitle {
+      padding: 70px 0 0;
+      font-size: 20px;
+      margin-bottom: 20px;
+
+      &:before {
+        top: 60px;
+        transform: translate(0, -100%);
+      }
+    }
+
+    &__list-item {
+      padding-left: 35px;
+    }
+
+    &__list-text {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desc {
+
+  }
+}

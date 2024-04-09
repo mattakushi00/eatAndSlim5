@@ -1,0 +1,41 @@
+.link {
+  color: $white;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  background: $buttonBg;
+  background-position: 0 0;
+  background-size: 200%;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+  transform: scale(1) translateZ(0);
+  border-radius: 90px;
+  box-shadow: 0 9px 25px 0 rgba(123, 66, 238, 0.31);
+  will-change: transform;
+
+  &_center {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-position: 100% 100%;
+    transform: scale(1.01) translateZ(0);
+    box-shadow: 0 9px 25px 20px rgba(123, 66, 238, 0.1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .link {
+    &_long {
+      font-size: 16px;
+      padding: 30px 15px;
+    }
+  }
+}

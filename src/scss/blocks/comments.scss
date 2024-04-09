@@ -1,0 +1,295 @@
+.comments {
+  z-index: 4;
+
+  &__title {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+    span {
+      color: $main2;
+    }
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    max-width: 625px;
+    margin-bottom: 75px;
+    padding-right: 50px;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url("../../assets/img/arrow__red.svg") no-repeat center / contain;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 56px;
+      height: 64px;
+    }
+  }
+
+  &__list {
+    &.slick-dotted.slick-slider {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+  }
+
+  &__avatar {
+    position: relative;
+    max-width: 756px;
+    padding: 25px;
+
+    &:before {
+      content: '';
+      display: block;
+      background: $white;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-50%);
+      border-radius: 0 15px 15px 0;
+    }
+  }
+
+  &__avatar-img {
+    max-width: 390px;
+    margin-left: auto;
+    border-radius: 15px;
+  }
+
+
+  &__info {
+    max-width: 670px;
+    padding: 15px 0;
+  }
+
+  &__name {
+    font-size: 17px;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin-bottom: 30px;
+
+  }
+
+  &__name-value {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  &__name-dot {
+    background: $dark;
+    position: relative;
+    width: 12px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      background: $dark;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 230px;
+      height: 2px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 25px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__stars {
+    max-width: 154px;
+  }
+
+  &__rating-value {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .slick {
+
+    &-track {
+      gap: 0;
+    }
+
+    &-prev,
+    &-next {
+      right: auto;
+      left: 50%;
+    }
+
+    &-prev {
+      transform: translateX(-800%);
+    }
+
+    &-next {
+      transform: translateX(700%) rotate(180deg);
+    }
+
+    &-dots {
+      max-width: 680px;
+
+      li {
+        width: 18%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  .comments {
+
+    &__info {
+      padding: 0;
+    }
+
+    &__name {
+      margin-bottom: 10px;
+    }
+
+    &__name-value {
+      margin-bottom: 10px;
+    }
+
+    &__name-dot:before {
+      width: 200px;
+    }
+
+    &__list-item {
+      gap: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .comments {
+
+    &__list {
+      &.slick-dotted.slick-slider {
+        padding-bottom: 75px;
+      }
+    }
+
+    &__list-item {
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      overflow: hidden;
+    }
+
+    &__avatar {
+      max-width: 380px;
+      padding: 15px;
+
+      &:before {
+        right: 0;
+
+        width: 1000px;
+      }
+    }
+
+    &__info {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    &__text {
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .slick {
+      &-prev {
+        left: 15px;
+        transform: none;
+      }
+
+      &-next {
+        right: 15px;
+        left: auto;
+        transform: rotate(180deg);
+      }
+
+      &-dots {
+        width: 65%;
+      }
+
+      &-dots li {
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comments {
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .comments {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      padding-right: 0;
+
+      &:before {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comments {
+
+    &__avatar {
+      max-width: 95%;
+    }
+
+  }
+}

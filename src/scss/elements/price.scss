@@ -1,0 +1,70 @@
+.price {
+
+
+  &__row {
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto 10px;
+  }
+
+  &__sale-text {
+    font-size: 24px;
+    font-weight: 700;
+    width: auto;
+    color: $main2;
+  }
+
+  &__item {
+    max-width: 110px;
+    text-align: center;
+  }
+
+  &__old {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-decoration: line-through;
+    opacity: .6;
+  }
+
+  &__text {
+    font-size: 31px;
+    font-weight: 900;
+  }
+
+  &__new {
+    span {
+      color: $main2;
+      font-size: 70px;
+      font-weight: 900;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .price {
+    &__sale-text {
+      font-size: 18px;
+    }
+
+    &__item {
+      max-width: 95px;
+    }
+
+    &__text {
+      font-size: 21px;
+      max-width: 170px;
+    }
+
+    &__old {
+      font-size: 20px;
+    }
+
+    &__new span {
+      font-size: 60px;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.lessons {
+  z-index: 2;
+  padding: 50px 0;
+
+  &__container {
+    gap: 50px;
+
+    &:before {
+      content: '';
+      display: block;
+      background: $white;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 1150px;
+      aspect-ratio: 1 / 1;
+      transform: translate(-25%, -15%);
+      opacity: .7;
+      border-radius: 50%;
+      filter: blur(315px);
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__title {
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1;
+    max-width: 1140px;
+
+    span {
+      color: $main2;
+    }
+  }
+
+  &__left {
+    max-width: 310px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  &__list {
+    max-width: 870px;
+
+    &.slick-dotted.slick-slider {
+      margin-bottom: 0;
+      padding-bottom: 50px;
+    }
+  }
+
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 845px;
+    margin-bottom: 40px;
+  }
+
+  &__list-img {
+    max-width: 294px;
+    clip-path: url(#lessonsClip);
+    -webkit-clip-path: url(#lessonsClip);
+  }
+
+  &__list-info {
+    max-width: 540px;
+  }
+
+  &__list-title {
+    color: $white;
+    text-align: center;
+    background: $main2;
+    max-width: 160px;
+    margin: 0 0 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  &__list-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 380px;
+    margin-bottom: 15px;
+  }
+
+  &__list-text {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  &__link {
+    max-width: 380px;
+    padding: 30px;
+  }
+
+  .slick {
+
+    &-track {
+      align-items: flex-start;
+    }
+
+    &-dots li {
+      background: none;
+      width: 20%;
+      border: 2px solid $dark;
+
+      &.slick-active {
+        background: $dark;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .lessons {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+
+    &__list-item {
+      margin: 0 auto 40px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .lessons {
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lessons {
+
+    &__container:before {
+      top: 30%;
+      width: 500px;
+      filter: blur(200px);
+    }
+
+    &__list-item {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+
+    &__list-info {
+      max-width: 600px;
+    }
+
+    .slick {
+      &-dots li {
+        width: 7%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lessons {
+
+    &__container {
+      gap: 25px;
+    }
+
+    &__row {
+      gap: 25px;
+    }
+
+    &__title {
+      font-size: 29px;
+    }
+
+    &__list-title {
+      padding: 5px 10px;
+    }
+
+    &__list-text {
+      line-height: 1;
+    }
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .lessons {
+
+  }
+}

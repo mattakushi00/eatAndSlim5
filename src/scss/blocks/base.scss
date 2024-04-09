@@ -1,0 +1,138 @@
+.base {
+  z-index: 4;
+  padding: 90px 0;
+
+  &__title {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 120px;
+
+    span {
+      color: $main2;
+      display: block;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -30px;
+    right: 230px;
+    max-width: 622px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 505px;
+    margin-bottom: 50px;
+
+    &:after {
+      content: '';
+      display: block;
+      background: url('../../assets/img/base__arrow.svg') no-repeat center / contain;
+      width: 104px;
+      height: 41px;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 30px;
+  }
+
+  &__list-item {
+    max-width: 207px;
+  }
+
+  &__list-img {
+    max-width: 182px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+
+  &__list-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .base {
+    &__img {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .base {
+    &__container {
+      justify-content: center;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__img {
+      position: relative;
+      top: 0;
+      margin-top: -50px;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      justify-content: center;
+      gap: 25px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .base {
+    padding: 30px 0;
+
+    &__text {
+      margin-bottom: 35px;
+
+      &:after {
+        margin: 15px 0 0 auto;
+        transform: rotate(35deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .base {
+    &__container {
+      justify-content: flex-start;
+    }
+
+    &__title {
+      font-size: 40px;
+      max-width: 245px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__list-item {
+      max-width: 120px;
+    }
+
+    &__list-text {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}
