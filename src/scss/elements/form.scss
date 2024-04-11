@@ -13,33 +13,57 @@
     &:before {
       content: '';
       display: block;
+      background: url('../../assets/img/form__select.svg') no-repeat center / contain;
       position: absolute;
+      z-index: 6;
       top: 50%;
-      transform: translateY(-50%);
+      right: 20px;
       width: 7px;
       aspect-ratio: 1 / 1;
-      background: url('../../assets/img/form__select.svg') no-repeat center / contain;
-      right: 20px;
-      z-index: 6;
       cursor: pointer;
+      transform: translateY(-50%);
     }
+  }
+
+  &__block {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 10px;
   }
 
   &__input {
     font-size: 16px;
-    border-radius: 90px;
     background: $white;
-    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
     padding: 20px 30px;
     cursor: pointer;
     border: none;
+    border-radius: 90px;
     outline: none;
-    position: relative;
-    z-index: 3;
 
     &_grey {
       background: $grey_ligth;
     }
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 15px;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+
+  &__text-item {
+    color: $dark;
+    cursor: pointer;
+    display: inline;
+  }
+
+  &__text-link {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 

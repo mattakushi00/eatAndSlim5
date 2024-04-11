@@ -219,6 +219,10 @@
 @media screen and (max-width: 1280px) {
   .main {
 
+    &__container {
+      gap: 20px;
+    }
+
     &__center {
       display: flex;
       align-items: center;
@@ -234,7 +238,8 @@
       bottom: 0;
       width: 1057px;
       margin-top: 10px;
-      transform: translateX(-53%);
+      transform: none;
+      left: -35px;
     }
 
     &__side-item {
@@ -282,6 +287,14 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .main {
+    &__side {
+      transform: translateX(-53%);
+      left: 50%;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .main {
     padding-top: 85px;
@@ -338,11 +351,5 @@
     &__card-wrap {
       padding: 15px 10px 40px;
     }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main {
-
   }
 }
