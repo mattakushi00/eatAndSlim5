@@ -26,9 +26,6 @@
   }
 
   &__block {
-    display: flex;
-    gap: 15px;
-    position: relative;
     margin-bottom: 10px;
   }
 
@@ -46,24 +43,6 @@
     &_grey {
       background: $grey_ligth;
     }
-  }
-
-  &__checkbox {
-    display: inline-block;
-    width: 15px;
-    aspect-ratio: 1;
-    cursor: pointer;
-  }
-
-  &__text-item {
-    color: $dark;
-    cursor: pointer;
-    display: inline;
-  }
-
-  &__text-link {
-    text-decoration: underline;
-    cursor: pointer;
   }
 }
 
