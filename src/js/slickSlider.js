@@ -6,8 +6,8 @@ const mobileWidthMediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`)
 
 const expertSettings = {
     rows: 0,
-    infinite: true,
-    adaptiveHeight: true,
+    infinite: false,
+    adaptiveHeight: false,
     slidesToScroll: 1,
     slidesToShow: 2,
     dots: true,
@@ -33,8 +33,8 @@ mobileWidthMediaQuery.addEventListener('change', expertSliderHandler)
 
 $('.lessons__list').slick({
     rows: 2,
-    infinite: true,
-    adaptiveHeight: true,
+    infinite: false,
+    adaptiveHeight: false,
     slidesToScroll: 1,
     slidesToShow: 1,
     dots: true,
@@ -61,8 +61,8 @@ $('.lessons__list').slick({
 
 $('.comments__list').slick({
     rows: 0,
-    infinite: true,
-    adaptiveHeight: true,
+    infinite: false,
+    adaptiveHeight: false,
     slidesToScroll: 1,
     slidesToShow: 1,
     dots: true,

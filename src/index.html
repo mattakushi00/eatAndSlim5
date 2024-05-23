@@ -54,7 +54,7 @@
 								<div class="price__row">
 									<p class="price__sale-text">Sconto del 99%!</p>
 									<div class="price__item price__old">
-										<span class="price__old-value">200</span> <span class="price__old-currency">€</span>
+										<span class="price__old-value">49</span> <span class="price__old-currency">€</span>
 									</div>
 								</div>
 								<div class="price__row">
@@ -554,7 +554,7 @@
 		</section>
 
 		<section class="main main_bottom">
-			<div class="anchor" id="order"></div>
+			<div class="anchor"></div>
 			<div class="main__layer main__layer_back main__layer_transparent">
 				<div class="main__blur"></div>
 				<img src="assets/img/main__light.svg" alt="light" class="main__light">
@@ -584,7 +584,7 @@
 									<div class="price__row">
 										<p class="price__sale-text">Sconto del 99%!</p>
 										<div class="price__item price__old">
-											<span class="price__old-value">200</span> <span class="price__old-currency">€</span>
+											<span class="price__old-value">49</span> <span class="price__old-currency">€</span>
 										</div>
 									</div>
 									<div class="price__row">
@@ -595,7 +595,21 @@
 									</div>
 								</div>
 							</div>
-							<a href="#order" class="main__link link">Еacquistare il corso</a>
+							<form class="form">
+								<div class="form__block">
+									<input type="text" class="form__input" placeholder="Il vostro nome">
+								</div>
+								<div class="form__block">
+									<input type="text" class="form__input" placeholder="il vostro numero di telefono">
+								</div>
+								<div class="popup__form">
+									<input type="checkbox" id="privacy" class="popup__checkbox">
+									<div class="popup__form-info">
+										<label for="privacy" class="popup__label">Autorizzo il trattamento dei miei dati personali con in conformità con la</label>
+										<span class="popup__form-link privacy__open">politica sulla privacy</span>
+									</div>
+								</div>
+							</form>
 
 						</div>
 						<div class="main__counter counter">
@@ -689,7 +703,7 @@
 	<div class="cookie" style="display: none">
 		<div class="cookie__wrap">
 			<div class="cookie__info">Utilizziamo i cookie. I cookie sono piccoli file di testo ospitati sul dispositivo di archiviazione dei dati che possono essere richiesti da un server web nel dominio in cui sono ospitati i cookie. Utilizziamo cookie e tecnologie simili per ricordare le tue preferenze e impostazioni, combattere le frodi, pubblicare annunci basati sugli interessi e altri scopi legittimi. Se selezioni "Sì, sono d'accordo «e poi cambi idea, puoi modificare»impostazioni".</div>
-			<div class="cookie__close">Sì, sono d'accordo</div>
+			<div class="cookie__close"><button>Sì, sono d'accordo</button> <button>Rinunciare</button></div>
 		</div>
 	</div>
 
