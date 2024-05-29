@@ -11,7 +11,7 @@ module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
 
     output: {
-        filename: '[name]-[hash:5].js',
+        filename: 'js/[name]-[hash:5].js',
         path: path.join(__dirname, 'dist'),
         publicPath: ''
     },
@@ -28,6 +28,12 @@ module.exports = {
         minimizer: [new TerserPlugin({
             extractComments: false,
         })],
+        splitChunks: {
+            chunks: 'all',
+            maxSize: 20000,
+            minRemainingSize: 0,
+            minChunks: 1,
+        },
     },
 
     plugins: [
