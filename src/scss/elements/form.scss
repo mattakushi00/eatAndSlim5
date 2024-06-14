@@ -27,6 +27,30 @@
 
   &__block {
     margin-bottom: 10px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 24px;
+      aspect-ratio: 1 / 1;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 4;
+    }
+
+    &_name:before {
+      background-image: url("../../assets/img/form__name.svg");
+    }
+
+    &_phone:before {
+      background-image: url("../../assets/img/form__phone.svg");
+    }
   }
 
   &__input {
@@ -34,7 +58,7 @@
     background: $white;
     position: relative;
     z-index: 3;
-    padding: 20px 30px;
+    padding: 20px 50px 20px 30px;
     cursor: pointer;
     border: none;
     border-radius: 90px;
@@ -71,10 +95,6 @@
       max-width: 255px;
     }
 
-    &__input {
-      padding: 8px 15px;
-    }
-
   }
 }
 
@@ -87,8 +107,5 @@
       max-width: 290px;
     }
 
-    &__input {
-      padding: 20px;
-    }
   }
 }

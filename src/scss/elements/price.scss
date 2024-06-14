@@ -1,23 +1,5 @@
 .price {
-
-
-  &__row {
-    max-width: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto 10px;
-  }
-
-  &__sale-text {
-    font-size: 24px;
-    font-weight: 700;
-    width: auto;
-    color: $main2;
-  }
-
   &__item {
-    max-width: 110px;
     text-align: center;
   }
 
@@ -44,19 +26,38 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1024px) {
   .price {
-    &__sale-text {
+    &__text {
+      font-size: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .price {
+    &__text {
       font-size: 18px;
     }
 
-    &__item {
-      max-width: 95px;
+    &__new span {
+      font-size: 28px;
     }
 
-    &__text {
+    &__old span {
       font-size: 21px;
-      max-width: 170px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .price {
+    
+    &__text {
+      font-size: 17px;
+      text-align: center;
+      margin-top: 10px;
     }
 
     &__old {
@@ -64,7 +65,7 @@
     }
 
     &__new span {
-      font-size: 60px;
+      font-size: 55px;
     }
   }
 }
