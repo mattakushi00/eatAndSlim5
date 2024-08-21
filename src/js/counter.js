@@ -4,7 +4,7 @@ const date = new Date()
 const step = 1000
 const zero = (val) => val.toString().length < 2 ? `0${val}` : val
 
-date.setMinutes(15)
+date.setMinutes(18)
 date.setSeconds(0)
 
 const interval = setInterval(() => {
