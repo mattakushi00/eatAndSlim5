@@ -1,6 +1,6 @@
 .base {
   z-index: 4;
-  padding: 90px 0;
+  padding: 90px 0 30px;
 
   &__title {
     font-size: 65px;
@@ -43,11 +43,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px 30px;
+    gap: 10px;
   }
 
   &__list-item {
-    max-width: 207px;
+    max-width: 240px;
   }
 
   &__list-img {
@@ -57,7 +57,7 @@
   }
 
   &__list-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.2;
   }

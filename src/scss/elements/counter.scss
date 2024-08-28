@@ -105,6 +105,7 @@
     &__title {
       font-size: 16px;
       text-align: center;
+      max-width: 100%;
     }
   }
 }
@@ -112,6 +113,7 @@
 
 @media screen and (max-width: 480px) {
   .counter {
-    max-width: 255px;
+    max-width: 100%;
+    padding-bottom: 0;
   }
 }

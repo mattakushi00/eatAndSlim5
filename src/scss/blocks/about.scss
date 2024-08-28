@@ -7,6 +7,16 @@
     height: 100%;
     clip-path: url(#aboutClip);
     -webkit-clip-path: url(#aboutClip);
+    overflow: hidden;
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__container {
@@ -58,6 +68,7 @@
       transform: translateX(-50%);
       clip-path: url(#aboutClipMobile);
       -webkit-clip-path: url(#aboutClipMobile);
+      overflow: hidden;
     }
 
     &__bg-img {

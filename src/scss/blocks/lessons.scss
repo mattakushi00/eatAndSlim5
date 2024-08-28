@@ -70,6 +70,7 @@
     max-width: 294px;
     clip-path: url(#lessonsClip);
     -webkit-clip-path: url(#lessonsClip);
+    overflow: hidden;
   }
 
   &__list-info {

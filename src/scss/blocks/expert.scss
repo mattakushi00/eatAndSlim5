@@ -8,6 +8,7 @@
     @include center;
     clip-path: url(#expertClip);
     -webkit-clip-path: url(#expertClip);
+    overflow: hidden;
   }
 
   &__container {

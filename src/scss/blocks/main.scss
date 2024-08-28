@@ -1,7 +1,7 @@
 .main {
   z-index: 3;
   margin-bottom: -100px;
-  padding: 130px 0 0;
+  padding: 80px 0 0;
 
   &_bottom {
     margin: 0;
@@ -13,17 +13,17 @@
   }
 
   &__layer {
-    position: relative;
     z-index: 2;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
 
     &_back {
-      background: $main;
-      position: absolute;
       z-index: 1;
+      position: absolute;
       left: 50%;
+      background: $main;
       width: 1920px;
       height: 100%;
       transform: translateX(-50%);
@@ -32,6 +32,7 @@
     &_mask {
       clip-path: url(#mainClip);
       -webkit-clip-path: url(#mainClip);
+      overflow: hidden;
     }
 
     &_transparent {
@@ -62,26 +63,25 @@
 
   &__logo {
     color: $main2;
-    font-size: 120px;
+    font-size: 95px;
     text-align: center;
-    position: relative;
     z-index: 3;
-    margin-bottom: 35px;
+    position: relative;
+    margin-bottom: 10px;
   }
 
   &__center {
-    position: relative;
     z-index: 2;
+    position: relative;
     max-width: 585px;
     margin-bottom: 50px;
   }
 
   &__text {
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 800;
     text-align: center;
-    max-width: 365px;
-    margin: 0 auto 25px;
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -101,19 +101,19 @@
   }
 
   &__list-text {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
   }
 
   &__card {
+    z-index: 2;
+    position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background: $main__flex;
-    position: relative;
-    z-index: 2;
     max-width: 575px;
     margin-bottom: -30px;
     padding: 15px 15px 40px;
@@ -149,24 +149,24 @@
   &__card-row {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 5px;
+    margin-bottom: 10px;
   }
 
   &__card-text {
     font-size: 20px;
     font-weight: 700;
-    position: relative;
     z-index: 3;
+    position: relative;
     max-width: 185px;
   }
 
   &__sale {
+    color: $main2;
     font-size: 46px;
     font-weight: 900;
-    width: auto;
-    color: $main2;
     text-align: center;
+    width: auto;
   }
 
   &__link {
@@ -180,12 +180,12 @@
   }
 
   &__side {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
     position: absolute;
-    bottom: -50px;
+    bottom: 50px;
     left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 110%;
     transform: translateX(-50%);
 
@@ -227,7 +227,7 @@
 
     &_1 {
       right: 0;
-      transform: translateX(20%);
+      transform: translateX(5%);
     }
 
     &_2 {
@@ -238,6 +238,13 @@
         transform: rotateY(180deg);
       }
     }
+  }
+
+  &__img {
+    &_shift {
+      transform: translateX(-35px);
+    }
+
   }
 }
 
@@ -251,21 +258,21 @@
 
     &__center {
       display: flex;
-      align-items: center;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       margin-bottom: 0;
     }
 
     &__side {
-      justify-content: center;
-      gap: 15px;
       position: relative;
       bottom: 0;
+      left: -35px;
+      justify-content: center;
+      gap: 15px;
       width: 1057px;
       margin-top: 10px;
       transform: none;
-      left: -35px;
     }
 
     &__side-item {
@@ -316,8 +323,8 @@
 @media screen and (max-width: 1024px) {
   .main {
     &__side {
-      transform: translateX(-53%);
       left: 50%;
+      transform: translateX(-53%);
     }
 
     &__sale {
@@ -325,6 +332,7 @@
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   .main {
     padding-top: 85px;
@@ -354,7 +362,12 @@
 @media screen and (max-width: 576px) {
   .main {
     &__logo {
-      font-size: 20vw;
+      font-size: 13vw;
+    }
+
+    &__list {
+      gap: 5px;
+      margin-bottom: 0;
     }
 
     &__blur {
@@ -363,11 +376,11 @@
     }
 
     &__text {
-      font-size: 20px;
+      font-size: 16px;
     }
 
     &__list-item {
-      max-width: 100px;
+      max-width: 120px;
     }
 
     &__list-icon {
@@ -375,7 +388,7 @@
     }
 
     &__list-text {
-      font-size: 14px;
+      font-size: 13px;
     }
 
     &__card {
@@ -383,7 +396,7 @@
     }
 
     &__card-wrap {
-      padding: 15px 10px  ;
+      padding: 15px 10px;
     }
 
     &__card-row {
