@@ -1,7 +1,8 @@
 .header {
   background: rgba(255, 255, 255, .001);
   position: fixed;
-  z-index: 99;
+  z-index: -1;
+  opacity: 0;
   top: 0;
   right: 0;
   left: 0;
@@ -9,9 +10,11 @@
   margin: 0 auto;
   padding: 15px 0;
   transition: all .3s ease-in-out;
+  background: $main;
 
-  &_bg {
-    background: $main;
+  &_active {
+    opacity: 1;
+    z-index: 99;
   }
 
   &__container {
