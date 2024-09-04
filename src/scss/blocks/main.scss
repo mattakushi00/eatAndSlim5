@@ -315,7 +315,12 @@
           transform: translateY(100%) rotateY(180deg);
         }
       }
+    }
 
+    &__img {
+      &_shift {
+        transform: translateX(5px);
+      }
     }
   }
 }
@@ -398,6 +403,10 @@
 
     &__card-wrap {
       padding: 15px 10px;
+
+      &_bottom {
+        padding-bottom: 30px;
+      }
     }
 
     &__card-row {
@@ -406,6 +415,7 @@
 
     &__sale {
       font-size: 29px;
+      margin-bottom: 5px;
     }
   }
 }

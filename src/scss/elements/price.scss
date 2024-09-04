@@ -20,6 +20,7 @@
   &__new {
     span {
       color: $main2;
+      line-height: 1;
       font-size: 40px;
       font-weight: 900;
     }
@@ -57,7 +58,7 @@
     &__text {
       font-size: 17px;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 0;
     }
 
     &__old {
